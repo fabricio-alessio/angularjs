@@ -1,0 +1,144 @@
+	<h1 class="text-center">{{module.name}}</h1>
+
+	<div class="row">
+	
+	<div class="col-md-12">	
+	
+		<div class="col-md-12">	
+			<div class="col-lg-6">
+			    <strong>Url of features:</strong> {{module.urlToRefresh}}
+			</div>
+		<div>
+		<br>
+
+		<div class="col-md-12">	
+			<uib-accordion close-others="oneAtATime" ng-repeat="(key,feature) in features">
+				<uib-accordion-group is-open="status.open">
+					<uib-accordion-heading>
+						{{key}}
+						<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
+					</uib-accordion-heading>
+
+					<div class="panel panel-default">
+					  	<div class="panel-heading">Payments Models</div>
+					  	<div class="panel-body">
+					    	<div class="col-md-12">
+							    <md-checkbox ng-model="feature.paymentModels.all" >
+						            All
+						        </md-checkbox>
+						    	<md-checkbox ng-model="feature.paymentModels.gateway" ng-hide="feature.paymentModels.all">
+						            Gateway
+						        </md-checkbox>
+						        <md-checkbox ng-model="feature.paymentModels.aggregator" ng-hide="feature.paymentModels.all">
+						            Aggregator
+						        </md-checkbox>
+				    		</div>
+					    </div>
+					</div>
+
+
+					<div class="panel panel-default">
+					  	<div class="panel-heading">Countries</div>
+					  	<div class="panel-body">
+					    	<div class="col-md-12" >
+								<md-checkbox ng-model="feature.mapCountries.all" aria-label="allcountries" class="col-md-1">
+						            All
+						        </md-checkbox>
+							 	<md-chips ng-model="feature.mapCountries.list" md-autocomplete-snap
+						              md-transform-chip="transformChip($chip)"
+						              md-require-match="true" ng-hide="feature.mapCountries.all" 
+						              class="col-md-11">
+						      
+							        <md-autocomplete
+							          md-selected-item="selectedItem"
+							          md-search-text="searchText"
+							          md-items="item in querySearch(searchText)"
+							          md-item-text="item.name"
+							          placeholder="Search for a country">
+							        	<span md-highlight-text="searchText">{{item.name}} / {{item.code}}</span>
+							        </md-autocomplete>
+								    <md-chip-template>
+								    	<span>
+								        	<strong>{{$chip.name}}</strong>
+								        	<em>({{$chip.code}})</em>
+								      	</span>
+								    </md-chip-template>
+							    </md-chips>
+				   			</div>
+					  	</div>
+					</div>
+
+					<div class="panel panel-default">
+				  		<div class="panel-heading">Roles</div>
+				  		<div class="panel-body">
+					    	<div class="col-md-12" >
+								<md-checkbox ng-model="feature.mapRoles.all" aria-label="allroles" 
+								class="col-md-1">
+						            All
+						        </md-checkbox>
+
+							 	<md-chips ng-model="feature.mapRoles.list" 
+							 		  md-autocomplete-snap
+						              md-transform-chip="transformChipRoles($chip)"
+						              md-require-match="true"
+									  ng-hide="feature.mapRoles.all"
+						              class="col-md-11">
+						      
+							        <md-autocomplete
+							          md-selected-item="selectedItem"
+							          md-search-text="searchText"
+							          md-items="item in querySearchRoles(searchText)"
+							          md-item-text="item"
+							          placeholder="Search for a role">
+							        	<span md-highlight-text="searchText">{{item}}</span>
+							        </md-autocomplete>
+								    <md-chip-template>
+								    	<span>
+								        	<strong>{{$chip.name}}</strong>
+								      	</span>
+								    </md-chip-template>
+							    </md-chips>
+
+							    <ng-value>
+							    	<span>
+							        	<strong>Roles: </strong>
+							      	</span>
+							    </ng-value>
+							    <ng-value ng-repeat="roleChoice in rolesChoices">
+							    	<span>
+							        	<strong>{{roleChoice}}</strong>
+							      	</span>
+							   </ng-value>
+
+				   			</div>
+					  	</div>
+					</div>
+
+				 	<div class="panel panel-default">
+					  	<div class="panel-heading">Accounts</div>
+				  		<div class="panel-body">
+					   		<div class="col-md-12">
+						    	<md-checkbox ng-model="feature.mapAccountIds.all" class="col-md-1">
+						            All
+						        </md-checkbox>
+
+						    	<md-chips ng-model="feature.mapAccountIds.list" placeholder="Enter with the account(s)"
+								        delete-button-label="Remove Account" delete-hint="Press delete to remove an account"
+								        secondary-placeholder="+Account" class="col-md-11" 
+								        ng-hide="feature.mapAccountIds.all">
+								</md-chips>
+						    </div>
+				  		</div>
+					</div>
+
+				</uib-accordion-group>
+			</uib-accordion>
+		</div>
+
+		<div class="col-md-12">	
+			<button ng-click="remove()" class="btn btn-danger">Delete</button>
+			<a href="#/modules" class="btn btn-default">Cancel</a>
+			<button ng-click="save()" class="btn btn-primary" ng-hide="hasError">Save</button>	
+		</div>
+	</div>
+	</div>

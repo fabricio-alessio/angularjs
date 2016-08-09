@@ -1,0 +1,11 @@
+.secure-login-wrapper .login-container {
+    max-width: 520px;
+    margin: auto;
+    padding-top: 6%
+}
+
+.secure-login-wrapper div.secure-login-wrapper {
+    background-color: #f1f3f6;
+    height: 950px;
+    min-height: 100%;
+}

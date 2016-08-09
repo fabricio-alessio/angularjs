@@ -1,0 +1,58 @@
+<html ng-app="authorization">
+	<head>
+		<meta charset="UTF‐8">
+		<!-- build:css styles/index.min.css -->
+		<link rel="stylesheet" href="styles/base.css">
+		<link rel="stylesheet" href="styles/style.css">
+		<link rel="stylesheet" href="styles/login.css">
+		<!-- endbuild -->
+		<!-- build:css styles/vendor.min.css -->
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+		<link rel="stylesheet" type="text/css" href="bower_components/sweetalert/dist/sweetalert.css">
+		<!-- endbuild -->
+	</head>
+	<body>
+		<div class="container">
+			
+		<!-- <ng-view></ng-view> -->
+		<!-- Page view wrapper -->
+  		<div class="uiview" ui-view></div>
+
+			
+		</div>
+		
+		<!-- build:js scripts/vendor.min.js -->
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="bower_components/ngstorage/ngStorage.min.js"></script>
+		<script src="bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="bower_components/angular-touch/angular-touch.min.js"></script>
+		<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+		<script src="bower_components/angular-material/angular-material.js"/></script>
+		<script src="bower_components/angular-aria/angular-aria.js"/></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"/></script>
+		<script src="bower_components/sweetalert/dist/sweetalert.min.js"></script>
+		<script src="bower_components/angular-translate/angular-translate.min.js"></script>
+		<script src="bower_components/angular-translate-loader-partial/angular-translate-loader-partial.min.js"></script>
+		<script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.min.js"></script>
+		<!-- endbuild -->
+		<!-- build:js scripts/scripts.min.js -->
+		<script src="scripts/app.js"></script>
+		<script src="scripts/constants.js"></script>
+		<script src="scripts/services/loginService.js"></script>
+		<script src="scripts/controllers/LoginCtrl.js"></script>
+		<script src="scripts/controllers/ModulesCtrl.js"></script>
+		<script src="scripts/controllers/ModuleCtrl.js"></script>
+		<script src="scripts/controllers/ModuleNewCtrl.js"></script>
+		<script src="scripts/services/moduleService.js"></script>
+		<script src="scripts/services/roleService.js"></script>
+		<script src="scripts/services/countryService.js"></script>
+		<script src="scripts/services/moduleAdapterIn.js"></script>
+		<script src="scripts/services/moduleAdapterOut.js"></script>
+		<!-- endbuild -->
+	</body>
+</html>

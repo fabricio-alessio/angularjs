@@ -1,0 +1,7 @@
+/*logo payu*/
+.icon-logo_payu {
+  background-image: url(../../images/sprites/common.png);
+  background-position: -150px 0px;
+  width: 146px;
+  height: 68px;
+}

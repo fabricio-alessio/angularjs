@@ -1,0 +1,14 @@
+{
+    "LOGIN_REQUIRED": "Login is required",
+    "LOGIN_INVALID": "User or password invalid",
+    "REFRESH_FAILED": "Refresh failed. Verify the module's url",
+    "MODULE_EXISTING": "Module already created",
+    "MODULE_NOT_FOUND": "Module not found",
+    "USER_NOT_FOUND": "User not found",
+    "URL_INVALID": "URL is invalid",
+    "ROLE_EXISTING": "Role already created",
+	"ROLE_NOT_FOUND": "Role not found",
+	"ROLE_NAME_REQUIRED": "Name of role is required",
+	"ROLE_ID_REQUIRED": "Id of role is required",
+	"MERCHANT_ID_REQUIRED": "Merchant id is required"
+}

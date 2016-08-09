@@ -1,0 +1,34 @@
+<h1 class="text-center">New module</h1>
+
+<form novalidate name="form" class="form-horizontal" ng-submit="create()">
+	<div class="col-md-12">
+		<div class="form-group">
+			<label class="col-md-2" for="login">Name:</label>
+			<div class="col-md-10">
+			    <input type="text" name="name" class="form-control" 
+			    	ng-model="module.name" placeholder="Enter module name" required />
+			    <span ng-show="form.$submitted && form.name.$error.required" 
+			    	class="form-control alert-danger">
+					Module name required
+				</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<div class="col-md-2">
+				<label for="login">URL to refresh:</label>
+			</div>
+			<div class="col-md-10">
+			    <input type="text" name="url" class="form-control" ng-model="module.urlToRefresh" 
+			    	placeholder="Enter url to obtain module's features. Ex.: http://localhost:9000/modules/users.json" required />
+			    <span ng-show="form.$submitted && form.url.$error.required" 
+			    	class="form-control alert-danger">
+					Module url to refresh required
+				</span>
+			</div>
+		</div>
+		<div class="form-group">
+			<button class="btn btn-primary" type="submit">Create module</button>
+			<a href="#/modules" class="btn btn-primary">Cancel</a>
+		</div>
+	</div>
+</form>

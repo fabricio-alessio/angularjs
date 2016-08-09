@@ -1,0 +1,11 @@
+{
+    "name": "authorization",
+    "activeToAllMerchants": true,
+    "activeToAllCountries": true,
+    "features": {
+      "user.consult": ["ADMIN", "MANAGER", "CONSULT"],
+      "user.manage": ["ADMIN", "MANAGER"],
+      "permissions.consult": ["ADMIN", "MANAGER", "CONSULT"],
+      "permissions.manage": ["ADMIN", "MANAGER"]
+    }
+ }

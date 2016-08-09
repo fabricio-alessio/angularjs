@@ -1,0 +1,18 @@
+<div class="container">
+	<h1 class="text-center">Modules</h1>
+	<div class="row">
+		
+		<div class="list-group col-md-3" ng-repeat="module in modules">
+			<a href="#/module/{{module.name}}" class="list-group-item">
+				<div class="list-group-item-heading">
+					<h4>{{module.name}} </h4>
+
+				</div>
+				<p class="list-group-item-text" ng-repeat="(key, feature) in module.features">
+					{{key}}
+				</p>
+			</a>
+		</div>
+	</div>
+	<a href="#/module-new" class="btn btn-primary">New module</a>
+</div>
